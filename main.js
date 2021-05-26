@@ -101,3 +101,38 @@ if(e.shiftKey == true && keypressed == '77'){
 } 
 }
 
+
+function up(){
+  if(player_y>=0){
+    player_y = player_y - block_y;
+    canvas.remove(player_object);
+    player_update();
+    console.log("up")
+  }
+}
+function down(){
+  if(player_y<=600){
+    player_y = player_y + block_y;
+    canvas.remove(player_object);
+    player_update();
+    console.log("down")
+  }
+}
+
+function left(){
+  if(player_x>=0){
+    player_x = player_x - block_x;
+    canvas.remove(player_object);
+    player_update();
+    console.log("left")
+  }
+}
+
+function right(){
+  if(player_x<=600){
+    player_x = player_x - block_x;
+    canvas.remove(player_object);
+    player_update();
+    console.log("right")
+  }
+}
